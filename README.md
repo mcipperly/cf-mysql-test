@@ -18,7 +18,7 @@ This repository contains the code necessary for deploying a test application on 
     
 3. Provision MySQL instance
 
-   `cf create-service mysql db-small demo-mysql`
+   `cf create-service mysql db-small svc-test-mysql`
     
 4. Deploy application
 
