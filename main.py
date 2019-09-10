@@ -14,7 +14,6 @@ app = Flask(__name__)
 def connect_mysql():
     if os.getenv("VCAP_SERVICES"):
         csql = json.loads(os.getenv("VCAP_SERVICES"))
-        print(json.dumps(csql))
         conn = pymysql.connect(host=csql["p.mysql"][0]["credentials"]["hostname"],
                                user=csql["p.mysql"][0]["credentials"]["username"],
                                password=csql["p.mysql"][0]["credentials"]["password"],
